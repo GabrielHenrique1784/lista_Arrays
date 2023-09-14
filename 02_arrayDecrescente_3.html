@@ -3,12 +3,52 @@
     //Peça para um usuário inserir três números. Crie um array com os três números, colocando-os em ordem decrescente. Para ordenar, NÃO use o método reverse();
     //Retorne os elementos do array, separando-os por hífen (n1 - n2 - n3).
 
-    //ENTRADA
+    let NumUm = Number(prompt("Insira um número").trim());
+    let NumDois = Number(prompt("Insira outro número").trim());
+    let NumTres = Number(prompt("Insira um 3º número").trim(0))
+    let nova = [];
+    let array = [NumUm, NumDois, NumTres];
 
+    if (isNaN(NumUm) || isNaN(NumDois) || isNaN(NumTres)) {
+        alert(`Poh mn, se é mó burrão, insira números!`)
+    }
 
-    //PROCESSAMENTO
+    else {
 
+        if (NumUm > NumDois && NumUm > NumTres && NumDois > NumTres) {
+            nova.push(NumUm)
+            nova.push(NumDois)
+            nova.push(NumTres)
+        }
+        else if ((NumUm > NumDois && NumUm > NumTres && NumTres > NumDois)) {
+            nova.push(NumUm)
+            nova.push(NumTres)
+            nova.push(NumDois)
+        }
+        else if (NumDois > NumUm && NumDois > NumTres && NumUm > NumTres) {
+            nova.push(NumDois)
+            nova.push(NumUm)
+            nova.push(NumTres)
+        }
+        else if ((NumDois > NumUm && NumDois > NumTres && NumTres > NumUm)) {
+            nova.push(NumDois)
+            nova.push(NumTres)
+            nova.push(NumUm)
+        }
+        else if ((NumTres > NumUm && NumTres > NumDois && NumUm > NumDois)) {
+            nova.push(NumTres)
+            nova.push(NumUm)
+            nova.push(NumDois)
+        }
+        else if (NumTres > NumUm && NumTres > NumDois && NumDois > NumUm) {
+            nova.push(NumTres)
+            nova.push(NumDois)
+            nova.push(NumUm)
+        }
+    };
 
-    //SAÍDA
+    let mensagem = "A ordem decrescente é " + `${nova.join(" - ")}`
+
+    alert(`${mensagem}`)
 
 </script>

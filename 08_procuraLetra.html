@@ -5,12 +5,18 @@
 
     //Apresente para o usuário se a LETRA que ele quer procurar existe ou não na palavra digitada e qual a primeira posição da LETRA na PALAVRA.
 
-    //ENTRADA
+    const palavra = prompt("Digite uma palavra:");
 
+    const letra = prompt("Digite a letra que deseja encontrar na palavra:");
 
-    //PROCESSAMENTO
+    const primeiraPosicao = palavra.indexOf(letra);
 
+    if (primeiraPosicao !== -1) {
+        alert(`A letra '${letra}' existe na palavra '${palavra}' na posição ${primeiraPosicao}.`);
+    } 
 
-    //SAÍDA
+    else {
+        alert(`A letra '${letra}' não foi encontrada na palavra '${palavra}'.`);
+    }
 
 </script>

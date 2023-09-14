@@ -7,12 +7,14 @@
     //As bebidas a serem compradas são: bebida1, bebida2, bebida3.
     //A lista completa de compras é: fruta1, fruta2, fruta3, bebida1, bebida2, bebida3.
 
-    //ENTRADA
+    let frutas = [prompt("Insira uma 1º Fruta"), prompt("Insira 2º Fruta"), prompt("Insira uma 3º Fruta")];
+    
+    let bebidas = [ prompt("Insira uma 1º Bebida"), prompt("Insira uma 2º Bebida"), prompt("Insira uma 3º Bebida")];
 
+    alert(`As frutas a comprar ${frutas.join(" - ")}`);
 
-    //PROCESSAMENTO
+    alert(`As bebidas a comprar ${bebidas.join(" - ")}`);
 
-
-    //SAÍDA
+    alert(`As frutas e bebidas a comprar ${bebidas(frutas).join(" - ")}`);
 
 </script>
